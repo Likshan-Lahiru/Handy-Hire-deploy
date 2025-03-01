@@ -20,7 +20,7 @@ export function ToolAdminPage() {
 
 
             <div className="w-full max-w-6xl">
-                <DataTable searchTerm={searchTerm} />
+                <DataTable  />
             </div>
 
 

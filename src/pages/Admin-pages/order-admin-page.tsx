@@ -6,9 +6,8 @@ import { Pencil, Trash2, ChevronDown } from "lucide-react";
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, TextField } from "@mui/material";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import {AppDispatch, RootState} from "../../store/store";
-import {deleteOrder, getOrders, updateOrder} from "../../reducers/orderReducer.ts";
-
+import { AppDispatch, RootState } from "../../store/store";
+import { deleteOrder, getOrders, updateOrder } from "../../reducers/orderReducer.ts";
 
 export default function OrderAdminPage() {
     const dispatch = useDispatch<AppDispatch>();
@@ -116,29 +115,6 @@ export default function OrderAdminPage() {
                     checkboxSelection
                     sx={{ border: 0 }}
                     getRowHeight={(params) => (expandedRows[params.id] ? 200 : 50)}
-                    renderRow={(params) => (
-                        <>
-                            <div className="flex items-center">
-                                {params.columns.map((col) => (
-                                    <div key={col.field} className="p-2">
-                                        {params.getValue(col.field)}
-                                    </div>
-                                ))}
-                            </div>
-                            {expandedRows[params.id] && (
-                                <div className="bg-gray-100 p-4 rounded-lg shadow-sm">
-                                    <h3 className="text-sm font-semibold">Order Details:</h3>
-                                    <ul>
-                                        {params.row.orderDetails.map((detail: any) => (
-                                            <li key={detail.id} className="text-sm">
-                                                <strong>Tool ID:</strong> {detail.tool_id}, <strong>Qty:</strong> {detail.qty}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
-                        </>
-                    )}
                 />
             </Paper>
 

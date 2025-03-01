@@ -1,5 +1,5 @@
 export default interface ToolModel {
-    id: string;
+    id: number;
     picture: string;
     name: string;
     description: string;
