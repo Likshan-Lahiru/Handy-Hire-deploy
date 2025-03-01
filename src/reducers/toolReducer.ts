@@ -55,7 +55,7 @@ export const updateTool = createAsyncThunk(
 );
 
 
-export const deleteTool = createAsyncThunk("tool/deleteTool", async (id: string) => {
+export const deleteTool = createAsyncThunk("tool/deleteTool", async (id: number) => {
     try {
         await api.delete(`/tools/delete/${id}`);
         return id;
