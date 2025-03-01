@@ -17,7 +17,7 @@ export function AdminPage() {
     useEffect(() => {
         async function fetchStats() {
             try {
-                const response = await fetch("http://localhost:8000/api/tools/stats");
+                const response = await fetch("https://handy-hire-backend-deploy.onrender.com/tools/stats");
                 if (!response.ok) {
                     throw new Error("Failed to fetch stats");
                 }

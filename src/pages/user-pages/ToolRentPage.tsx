@@ -38,14 +38,14 @@ export default function ToolRentCartPage() {
                     })),
                 };
 
-                const response = await axios.post('http://localhost:8000/api/orders/create', orderPayload);
+                const response = await axios.post('https://handy-hire-backend-deploy.onrender.com/orders/create', orderPayload);
 
                 if (response.status === 201) {
                     clearCart();
                     toast.success("Order placed successfully!", {
                         position: "top-right",
                         transition: Bounce,
-                        onClose: () => window.location.reload()
+
                     });
                 }
             } catch (error) {
