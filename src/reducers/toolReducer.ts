@@ -7,7 +7,7 @@ import axios from "axios";
 export const initialState: ToolModel[] = [];
 
 const api = axios.create({
-    baseURL: "https://handy-hire-backend-deploy.onrender.com/",
+    baseURL: " https://handy-hire-backend-deploy.onrender.com/api",
 });
 
 

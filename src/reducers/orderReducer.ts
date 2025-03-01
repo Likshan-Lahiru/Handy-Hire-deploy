@@ -6,7 +6,7 @@ import orderModel from "../model/OrderModel.ts";
 export const initialState: orderModel[] = [];
 
 const api = axios.create({
-    baseURL: "https://handy-hire-backend-deploy.onrender.com/",
+    baseURL: "https://handy-hire-backend-deploy.onrender.com/api",
 });
 
 export const getOrders = createAsyncThunk("order/getOrders", async () => {
