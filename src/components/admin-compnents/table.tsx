@@ -21,7 +21,7 @@ export default function DataTable() {
         dispatch(getTools()).then(() => setLoading(false));
     }, [dispatch]);
 
-    const handleDelete = (id: string) => {
+    const handleDelete = (id: number) => {
         if (window.confirm("Are you sure you want to delete this tool?")) {
             dispatch(deleteTool(id))
                 .then(() => {
